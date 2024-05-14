@@ -19,11 +19,11 @@ const AddBooking = ({ day, timeSlot, setBookings }) => {
                 if (response.ok) {
                     const newBooking = await response.json();
                     setBookings((prevBookings) => {
-                        const updatedBookings = { ...prevBookings };  // här använder jag mig av spridningssyntaxen "...", för att säkerställa smidighet på sidan lokalt medans den faktiskt databas ändringen hanteras i bakrunden tills den begäran är "klar"
-                        if (!updatedBookings[day]) { // Om det inte finns några bokningar för den angivna dagen...
-                            updatedBookings[day] = [newBooking]; // Skapa en ny array med den nya bokningen för den angivna dagen(1-7)
+                        const updatedBookings = { ...prevBookings };
+                        if (!updatedBookings[day]) {
+                            updatedBookings[day] = [newBooking];
                         } else {
-                            updatedBookings[day] = [...updatedBookings[day], newBooking];     // Om det redan finns bokningar för den angivna dagen.. Skapa en kopia av den befintliga arrayen och lägg till den nya bokningen i den kopian sedan skickas till databasen.
+                            updatedBookings[day] = [...updatedBookings[day], newBooking];
                         }
                         return updatedBookings;
                     });

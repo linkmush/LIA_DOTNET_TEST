@@ -133,40 +133,6 @@ namespace LIA_DOTNET_TEST.Repository
             }
         }
 
-        //public void UpdateBooking(int id, Booking booking)
-        //{
-        //    try
-        //    {
-        //        var updateBooking = _context.Bookings.FirstOrDefault(x => x.Day == booking.Day && x.TimeSlot!.Id == booking.TimeSlot!.Id);
-
-        //        if (updateBooking == null)
-        //        {
-        //            var bookingToUpdate = _context.Bookings.FirstOrDefault(x => x.Id == booking.Id);
-
-        //            if (bookingToUpdate != null && booking.TimeSlot != null)
-        //            {
-        //                bookingToUpdate.Day = booking.Day;
-
-        //                // Hämta befintlig tid från databasen med hjälp av ID
-        //                var existingTimeSlot = _context.TimeSlots.FirstOrDefault(x => x.Id == booking.TimeSlot.Id);
-
-        //                if (existingTimeSlot != null && existingTimeSlot.Id != bookingToUpdate.TimeSlot?.Id)  /*(existingTimeSlot != null)*/  // kontrollera så existingTimeSlot inte är null, och kontrollera så existingTimeslot ID inte är samma som bookintoupdate Id. För att ta bort så den inte tar bort och lägger till samma timeslot ID när det inte behövs.
-        //                {
-        //                    // Tilldela befintligt TimeSlot-objekt till bokningen
-        //                    bookingToUpdate.TimeSlot = existingTimeSlot;
-        //                }
-
-        //                _context.SaveChanges();
-        //                Debug.WriteLine($"Booking updated successfully: {booking.Id}");
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Debug.WriteLine($"An error occurred in the UpdateBooking method: {ex.Message}");
-        //    }
-        //}
-
         public void UpdateBooking(int id, Booking booking)
         {
             try

@@ -1,0 +1,180 @@
+/* Provide sufficient contrast against white background */
+
+.booking-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-title {
+    margin-top: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.booking-row {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.booking-row:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.booking-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3%;
+    margin: 10px 0;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.booking-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.time-slot {
+  font-style: italic;
+}
+
+.username {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+button {
+    background-color: teal;
+    color: #fff;
+    padding: 6px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+}
+
+.addbooking {
+    background-color: teal;
+    color: #fff;
+    padding: 6px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.addbooking:hover {
+    background-color: red;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+.button-red {
+    background-color: red;
+    color: #fff;
+    padding: 6px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.button-red:hover {
+    background-color: teal;
+    color: #fff;
+}
+
+.addedbooking {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.update-button {
+    background-color: teal;
+    color: #fff;
+    padding: 6px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.update-button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.select-field {
+    padding: 6px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #c2bebf;
+    color: #000000;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 100px;
+}
+
+@media (min-width: 1284px) {
+
+    .booking-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 3%;
+        margin: 10px 0;
+        align-items: baseline;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+    }
+
+    .addedbooking {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: row;
+    }
+
+    .update-booking {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: row;
+    }
+
+    .update-button {
+        margin-left: 10px;
+    }
+}
